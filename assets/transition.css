@@ -1,0 +1,60 @@
+body {
+  background-color: #aeaeae;
+}
+
+section > h3 {
+  margin-top: 2em;
+}
+
+section > article {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  /* applico display: flex per centrare il paragrafo all'interno */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article > p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+article.long {
+  background-color: rgb(180, 3, 180);
+  /* mettendo una transition qui specifichiamo gli stessi stili per l'entrata
+  della transizione e l'uscita */
+  /* applico la transition allo stato NORMALE dell'elemento (non :hover) */
+  /* transition: nome-proprietà durata curva-accelerazione delay */
+  transition: all 3s ease-in 0s;
+}
+
+article.long:hover {
+  /* applico nuove proprietà/valori all'elemento una volta raggiunto
+    dal cursore del mouse */
+  width: 700px;
+  background-color: rgb(157, 6, 6);
+  /* mettendo un'ulteriore transizione qui diversifichiamo l'entrata e l'uscita */
+  transition: all 1s linear 0s;
+}
+
+/* in questo modo state fornendo al cambio di CSS nell'hover una transizione
+con proprietà da animare, durata, accelerazione e ritardo.
+Questa transizione si applica sia in ingresso sia in uscita (cioè sia quando
+il cursore si posiziona, sia quando il cursore se ne va) */
+/* Per diversificare queste due transizioni, potete aggiungerne un'altra 
+nel blocco CSS dedicato agli stili in :hover... attenzione però che a questo
+punto la transition nel blocco hover sarà quella in ENTRATA mentre quella
+specificata negli stili NON in hover sarà quella in uscita */
+
+article.move {
+  background-color: darkgreen;
+  text-align: center;
+  transition: transform 5s linear 0s;
+}
+
+article.move:hover {
+  transform: translateX(600px) rotate(6.3turn);
+}

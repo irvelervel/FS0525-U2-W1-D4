@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS ANIMATION</title>
+    <link rel="stylesheet" href="./assets/animation.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ANIMAZIONI CSS</h1>
+    </header>
+    <main>
+      <h2>PROPRIETÀ ANIMATION</h2>
+      <!-- Le animazioni in CSS vi forniranno il massimo controllo possibile
+       per quanto riguarda i cambi di proprietà visive in maniera programmatica -->
+      <!-- non siamo più legati ad un evento di hover ma anzi è possibile innescare
+        un'animazione anche all'avvio della pagina e volendo ripeterla n volte -->
+      <section>
+        <h3>BOX CHE ALL'AVVIO SI SPOSTA</h3>
+        <article class="move">
+          <p>
+            MI SPOSTO <br />
+            ALL'AVVIO
+          </p>
+        </article>
+      </section>
+      <section>
+        <h3>BOX CHE VA AVANTI E INDIETRO</h3>
+        <article class="bounce">
+          <p>MI SPOSTO</p>
+        </article>
+      </section>
+      <section>
+        <h3>BOX PAZZO :)</h3>
+        <article class="crazy">
+          <p>SONO PAZZO</p>
+        </article>
+      </section>
+      <section>
+        <h3>BOX CON START/STOP :)</h3>
+        <div class="flex">
+          <button id="start-button">START</button>
+          <article class="box">
+            <p>BOX</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="./scripts/animation.js"></script>
+  </body>
+</html>

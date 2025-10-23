@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #bebebe;
+}
+
+main {
+  display: flex;
+  /* centriamo le cards */
+  justify-content: center;
+  /* alzo l'altezza del contenitore in modo da poter raggiungere il fondo */
+  height: 100vh;
+  align-items: center;
+}
+
+article.card {
+  width: 200px;
+  height: 450px;
+  /* fornisco colori, bordi etc. */
+  background-color: #4e4e4e;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  border: 1px solid black;
+  text-align: justify;
+  /* rallento l'applicazione degli effetti sull'hover con una TRANSITION */
+  transition: all 0.15s linear 0s;
+}
+
+article.card h3 {
+  text-align: center;
+}
+
+article.card:nth-of-type(1) {
+  transform: rotate(-15deg) translate(30px, 45px);
+  z-index: 1;
+}
+
+article.card:nth-of-type(2) {
+  transform: rotate(0) translate(0px, 0px);
+  z-index: 2;
+}
+
+article.card:nth-of-type(3) {
+  transform: rotate(15deg) translate(-30px, 45px);
+  z-index: 3;
+}
+
+article.card:hover {
+  transform: scale(1.2);
+  background-color: rgb(186, 142, 31);
+  z-index: 4;
+}

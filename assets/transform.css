@@ -1,0 +1,60 @@
+body {
+  background-color: #aeaeae;
+}
+
+section > h3 {
+  margin-top: 2em;
+}
+
+section > article {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  /* applico display: flex per centrare il paragrafo all'interno */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article > p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+article.rotate {
+  /* un selettore per tutti gli article DOTATI di classe "rotate" */
+  background-color: dodgerblue;
+  transform: rotate(11deg);
+  /* con transform-origin modificate il punto di origine della trasformazione */
+  transform-origin: 0% 50%;
+}
+
+article.rotate p {
+  transform: rotate(143deg);
+}
+
+article.rotate p span {
+  display: block;
+  transform: rotate(0.3turn);
+}
+
+article.translate {
+  background-color: mediumvioletred;
+  transform: translate(149px, -24px);
+}
+
+article.skew {
+  background-color: tomato;
+  transform: skew(23deg, 27deg);
+}
+
+article.scale {
+  background-color: darkslateblue;
+  transform: scale(130%);
+}
+
+article.multiple {
+  background-color: navy;
+  transform: scale(1.2) rotate(45deg) skew(10deg, 10deg);
+}
